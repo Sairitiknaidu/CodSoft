@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Fitness Gym | Your Health is Important for us</title>
+  <!-- Load Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">  
+  <!-- Load Styles -->
+  <link href="css/styles.css" rel="stylesheet">
+  <!-- Load Bootstrap Framework for ONLY making the Layout is Responsive quickly-->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!--Load my Gloabal Helper Classes Framework for Quick Style-->
+  <link href="css/fasthelpers.css" rel="stylesheet">
+  <!--Load Font Awesome Library for better Font Icons-->
+  <link href="css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- HTML Follows BEM naming conventions 
+  IDs are only used for sections to connect menu achors to sections -->
+  <header class="page__header">
+    <!--Logo-->
+    <div class="logo">
+      <h2>Fitness<span class="theme__bg">Gym</span></h2>
+    </div>
+    
+    <nav class="navbar__menu d-none d-lg-block" data-screen="desktop">
+     <!-- Navigation starts as empty UL that will be populated with JS -->
+      <ul id="navbar__list"></ul>
+    </nav>
+   
+    <nav class="navbar__menu d-lg-none" data-screen="mobile">
+      <!-- Navigation starts as empty UL that will be populated with JS -->
+      <span class="button mr-3 my-2">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </span>
+      <ul id="navbar__list" class="text-center"></ul>
+    </nav>
+  </header>
+  <!--Start Main-->
+  <main>
+    <!--Start Home Header-->
+    <section class="main__header relative active-section" id="home">
+      <div class="overlay"></div>
+      <div class="middle-content z-index">
+        <h1 class="white-color text-center">Your Health is Important</h1>
+        <p class="par white-color text-center relative">Start you Fitness Life with One of Our Offers</p>
+      </div>
+    </section>
+    <!--End Home Header-->
+
+    <!--Start Services-->
+    <section id="services" data-nav="#services" class="services section-padd">
+      <div class="landing__container">
+        <div class="container">
+          <h2 class="line-below relative mb-5 mt-3 text-center">Services</h2>
+          <div class="row">
+            <div class="col-lg-9">
+              <div class="landing__container">
+                <div class="services-boxes">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="service mb-5">
+                        <div>
+                          <span><i class="fas fa-running fa-2x theme__color border rounded-circle p-3 mb-2"></i></span>
+                        </div>
+                        <div>
+                          <h4 class="white-color">Start your Running Machine Round with best Price</h4>
+                          <p class="par">Treadmills are reliable machines, but if anything goes wrong, they can be dangerous. A regular service keeps the machine running safely and can resolve problems before they become expensive repairs.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="service mb-5">
+                        <div>
+                          <span><i class="fas fa-dumbbell fa-2x theme__color border rounded-circle p-3 mb-2"></i></span>
+                        </div>
+                        <div>
+                          <h4 class="white-color">Body Building is the most efficient you will enjoy with us</h4>
+                          <p class="par">Bodybuilding, weight training and aerobic exercise increase self-esteem, improve your health and body, lift your mood, reduce stress and frustration, improve your sleeping patterns, distract your mind from worries and difficult life events and situations, help you gain control of your life, body and mind.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="service mb-5">
+                        <div>
+                          <span><i class="fas fa-hot-tub fa-2x theme__color border rounded-circle p-3 mb-2"></i></span>
+                        </div>
+                        <div>
+                          <h4 class="white-color">Take your Jacuzzi & Sauna with cheapest Price ver</h4>
+                          <p class="par">A sauna room is a place designed to experience wet or hot steam at higher temperatures for a rejuvenating experience. The sauna bath is a wooden structure comprising hot stones onto which water is thrown to produce steam.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="service mb-5">
+                        <div>
+                          <span><i class="fas fa-money-bill-wave fa-2x theme__color border rounded-circle p-3 mb-2"></i></span>
+                        </div>
+                        <div>
+                          <h4 class="white-color">Book your Annual Subscription and consume 30% OFF</h4>
+                          <p class="par">Monthly Plan (1 month) ₹ 299. Quarterly Plan (3 months) ₹ 599. Annual Plan (12 months)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="section-img">
+                <img src="images/services.jpg" alt="gym" class="img-fluid radius shadow-lg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Services-->
+
+    <!--Start Offers-->
+    <section id="offers" data-nav="#offers" class="offers section-padd">
+      <div class="landing__container">
+        <div class="container">
+          <h2 class="line-below relative mb-5 mt-4 text-center">Offers</h2>
+
+          <div class="offers-specs text-center margin-bt">
+            <div class="row">
+              <div class="col-sm-4 mb-2">
+                <div class="spec p-1 theme__bg cursor border shadow-lg white-color active bold" style="width: 100%;" id="body_building">
+                  Body Building
+                </div>
+              </div>
+              <div class="col-sm-4 mb-2">
+                <div class="spec p-1 bg-light cursor border shadow-lg text-dark active bold" style="width: 100%;" id="fitness">
+                  Fitness
+                </div>
+              </div>
+              <div class="col-sm-4 mb-2">
+                <div class="spec p-1 bg-light cursor border shadow-lg text-dark bold" style="width: 100%;" id="jacuzzi">
+                  Jacuzzi & Sauna
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="offers-boxes mt-5">
+            <div class="box active" id="body_building">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card radius shadow-lg text-center relative mb-5 mr-auto ml-auto cursor">
+                    <img src="images/offers/offer1.jpg" class="card-img-top radius" alt="offer">
+                    <h5 class="card-title text-dark cursor relative z-index upper shadow-lg border rounded p-1">Quarterly subscription</h5>
+                    <div class="card-body overlay radius cursor">
+                      <div class="offer-dets middle-content">
+                        <div class="price">
+                          <del class="white-color relative bold">L.E.320.00</del>
+                            <span class="theme__color bold lead"><span>L.E.300.00</span></span>
+                        </div>
+                      </div>
+                      <div class="subscribe middle-content mt-5">
+                        <button class="btn shadow-lg rounded border theme__color white-bg transition">Subscribe</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card radius shadow-lg text-center relative mb-5 mr-auto ml-auto cursor">
+                    <img src="images/offers/offer2.jpg" class="card-img-top radius" alt="offer">
+                    <h5 class="card-title text-dark cursor relative z-index upper shadow-lg border rounded p-1">Half yearly subscription</h5>
+                    <div class="card-body overlay radius cursor">
+                      <div class="offer-dets middle-content">
+                        <div class="price">
+                          <del class="white-color relative bold">L.E.320.00</del>
+                            <span class="theme__color bold lead"><span>L.E.300.00</span></span>
+                        </div>
+                      </div>
+                      <div class="subscribe middle-content mt-5">
+                        <button class="btn shadow-lg rounded border theme__color white-bg transition">Subscribe</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card radius shadow-lg text-center relative mb-5 mr-auto ml-auto cursor">
+                    <img src="images/offers/offer3.jpg" class="card-img-top radius" alt="offer">
+                    <h5 class="card-title text-dark cursor relative z-index upper shadow-lg border rounded p-1">Full yearly subscription</h5>
+                    <div class="card-body overlay radius cursor">
+                      <div class="offer-dets middle-content">
+                        <div class="price">
+                          <del class="white-color relative bold">L.E.320.00</del>
+                            <span class="theme__color bold lead"><span>L.E.300.00</span></span>
+                        </div>
+                      </div>
+                      <div class="subscribe middle-content mt-5">
+                        <button class="btn shadow-lg rounded border theme__color white-bg transition">Subscribe</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>          
+              </div>
+            </div>
+
+            <div class="box" id="fitness">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card radius shadow-lg text-center relative mb-5 mr-auto ml-auto cursor" style="width: 18rem;">
+                    <img src="images/offers/offer4.jpg" class="card-img-top radius" alt="offer">
+                    <h5 class="card-title text-dark h3 cursor relative z-index upper shadow-lg border rounded">Quarterly subscription</h5>
+                    <div class="card-body overlay radius cursor">
+                      <div class="offer-dets middle-content">
+                        <div class="price">
+                          <del class="white-color relative bold">L.E.320.00</del>
+                            <span class="theme__color bold lead"><span>L.E.300.00</span></span>
+                        </div>
+                      </div>
+                      <div class="subscribe middle-content mt-5">
+                        <button class="btn shadow-lg rounded border theme__color white-bg transition">Subscribe</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card radius shadow-lg text-center relative mb-5 mr-auto ml-auto cursor" style="width: 18rem;">
+                    <img src="images/offers/offer5.jpg" class="card-img-top radius" alt="offer">
+                    <h5 class="card-title text-dark h3 cursor relative z-index upper shadow-lg border rounded">Half yearly subscription</h5>
+                    <div class="card-body overlay radius cursor">
+                      <div class="offer-dets middle-content">
+                        <div class="price">
+                          <del class="white-color relative bold">L.E.320.00</del>
+                            <span class="theme__color bold lead"><span>L.E.300.00</span></span>
+                        </div>
+                      </div>
+                      <div class="subscribe middle-content mt-5">
+                        <button class="btn shadow-lg rounded border theme__color white-bg transition">Subscribe</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card radius shadow-lg text-center relative mb-5 mr-auto ml-auto cursor" style="width: 18rem;">
+                    <img src="images/offers/offer6.jpg" class="card-img-top radius" alt="offer">
+                    <h5 class="card-title text-dark h3 cursor relative z-index upper shadow-lg border rounded">Full yearly subscription</h5>
+                    <div class="card-body overlay radius cursor">
+                      <div class="offer-dets middle-content">
+                        <div class="price">
+                          <del class="white-color relative bold">L.E.320.00</del>
+                            <span class="theme__color bold lead"><span>L.E.300.00</span></span>
+                        </div>
+                      </div>
+                      <div class="subscribe middle-content mt-5">
+                        <button class="btn shadow-lg rounded border theme__color white-bg transition">Subscribe</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>          
+              </div>
+            </div>
+
+            <div class="box" id="jacuzzi">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="card radius shadow-lg text-center relative mb-5 mr-auto ml-auto cursor" style="width: 18rem;">
+                    <img src="images/offers/offer7.jpg" class="card-img-top radius" alt="offer">
+                    <h5 class="card-title text-dark h3 cursor relative z-index upper shadow-lg border rounded">Quarterly subscription</h5>
+                    <div class="card-body overlay radius cursor">
+                      <div class="offer-dets middle-content">
+                        <div class="price">
+                          <del class="white-color relative bold">L.E.320.00</del>
+                            <span class="theme__color bold lead"><span>L.E.300.00</span></span>
+                        </div>
+                      </div>
+                      <div class="subscribe middle-content mt-5">
+                        <button class="btn shadow-lg rounded border theme__color white-bg transition">Subscribe</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card radius shadow-lg text-center relative mb-5 mr-auto ml-auto cursor" style="width: 18rem;">
+                    <img src="images/offers/offer8.jpg" class="card-img-top radius" alt="offer">
+                    <h5 class="card-title text-dark h3 cursor relative z-index upper shadow-lg border rounded">Half yearly subscription</h5>
+                    <div class="card-body overlay radius cursor">
+                      <div class="offer-dets middle-content">
+                        <div class="price">
+                          <del class="white-color relative bold">L.E.320.00</del>
+                            <span class="theme__color bold lead"><span>L.E.300.00</span></span>
+                        </div>
+                      </div>
+                      <div class="subscribe middle-content mt-5">
+                        <button class="btn shadow-lg rounded border theme__color white-bg transition">Subscribe</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="card radius shadow-lg text-center relative mb-5 mr-auto ml-auto cursor" style="width: 18rem;">
+                    <img src="images/offers/offer9.jpg" class="card-img-top radius" alt="offer">
+                    <h5 class="card-title text-dark h3 cursor relative z-index upper shadow-lg border rounded">Full yearly subscription</h5>
+                    <div class="card-body overlay radius cursor">
+                      <div class="offer-dets middle-content">
+                        <div class="price">
+                          <del class="white-color relative bold">L.E.320.00</del>
+                            <span class="theme__color bold lead"><span>L.E.300.00</span></span>
+                        </div>
+                      </div>
+                      <div class="subscribe middle-content mt-5">
+                        <button class="btn shadow-lg rounded border theme__color white-bg transition">Subscribe</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>          
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--End Offers-->
+
+    <!--Start Our Team-->
+    <section id="team" data-nav="#team" class="team section-padd">
+      <div class="overlay"></div>
+      <div class="landing__container">
+        <div class="container">
+          <h2 class="line-below relative mb-5 mt-3 text-center relative z-index">Our Team</h2>
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="team-intro mb-3">
+                <div class="info mt-5">
+                  <h3 class="white-color text-center relative z-index">We are pleased to introduce Our Expert Trainers to you</h3>
+                  <p class="par text-center relative z-index white-color">24/7 Cutomers Services at any Time with you</p>
+                  <div class="text-center bold relative z-index">
+                    <i class="fas fa-phone white-color"></i><span class="theme__color ml-1">+0024545898</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="team-members">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="card radius shadow-lg text-center relative mb-5 mr-auto ml-auto cursor z-index">
+                      <img src="images/team/member1.jpg" class="card-img-top radius shadow-lg" alt="member">
+                      <h5 class="card-title white-color theme__bg cursor relative z-index upper shadow-lg border radius padding">Cap. Andrew Yonel</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card radius shadow-lg text-center relative mb-5 mr-auto ml-auto cursor z-index">
+                      <img src="images/team/member2.jpg" class="card-img-top radius shadow-lg" alt="member">
+                      <h5 class="card-title white-color theme__bg cursor relative z-index upper shadow-lg border radius padding">Cap. Shaun Swete</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card radius shadow-lg text-center relative mb-5 mr-auto ml-auto cursor z-index">
+                      <img src="images/team/member3.jpg" class="card-img-top radius shadow-lg" alt="member">
+                      <h5 class="card-title white-color theme__bg cursor relative z-index upper shadow-lg border radius padding">Cap. Peter Blue</h5>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card radius shadow-lg text-center relative mb-5 mr-auto ml-auto cursor z-index">
+                      <img src="images/team/member4.jpg" class="card-img-top radius shadow-lg" alt="member">
+                      <h5 class="card-title white-color theme__bg cursor relative z-index upper shadow-lg border radius padding">Cap. Mac Yansin</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+    <!--End Our Team-->
+
+    <!--Start Customers-->
+    <section id="customers" data-nav="#customers"class="customers section-padd">
+      <div class="overlay"></div>
+      <div class="landing__container">
+        <div class="container">
+          <h2 class="line-below relative mb-5 mt-3 text-center relative z-index">Our Customers</h2>
+          <div class="opinions relative z-index">
+            <div class="row">
+              <div class="col-12">
+                <div class="opinion active text-center">
+                  <img src="images/customers/customer1.jpg" alt="customer" class="rounded-circle shadow-lg border mb-5">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.modi minus error ad. Ipsum  repudiandae at libero!</p>
+                  <h4 class="text-dark">Adam Yelow</h4>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="opinion text-center">
+                  <img src="images/customers/customer2.jpg" alt="customer" class="rounded-circle shadow-lg border mb-5">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.modi minus error ad. Ipsum  repudiandae at libero!</p>
+                  <h4 class="text-dark">John Petron</h4>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="opinion text-center">
+                  <img src="images/customers/customer3.jpg" alt="customer" class="rounded-circle shadow-lg border mb-5">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.modi minus error ad. Ipsum  repudiandae at libero!</p>
+                  <h4 class="text-dark">Peter Yonaldan</h4>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="opinion text-center">
+                  <img src="images/customers/customer4.jpg" alt="customer" class="rounded-circle shadow-lg border mb-5">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.modi minus error ad. Ipsum  repudiandae at libero!</p>
+                  <h4 class="text-dark">Frank Devid</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <i class="fas fa-chevron-right fa-2x z-index cursor"></i>
+          <i class="fas fa-chevron-left fa-2x z-index cursor"></i>  
+        </div>
+      </div>  
+    </section>
+    <!--End Customers-->
+
+    <!--Start Subscribe-->
+    <section id="subscribe" data-nav="#subscribe"class="subscribe section-padd">
+      <div class="overlay"></div>
+      <div class="landing__container">
+        <div class="container">
+          <h2 class="line-below relative mb-5 mt-3 text-center relative z-index">Subscribe</h2>
+          <form class="relative z-index">
+            <div class="form-group">
+              <label for="name bold">Name</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="form-group">
+              <label for="email bold">Email</label>
+              <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+              <small id="emailHelp" class="form-text grey">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+              <textarea placeholder="write your message" class="p-2 rounded"></textarea>             
+            </div>
+            <button type="submit" class="btn theme__bg border white-color">Submit</button>
+          </form>
+        </div>
+      </div>  
+    </section>
+    <!--End Subscribe-->
+  </main>
+  <!--End Main-->
+
+  <!--Start Footer-->
+  <footer class="page__footer">
+    <!--Start Top Footer-->
+    <div class="top-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 details">
+            <div class="social margin-bt">
+              <ul class="list-unstyled">
+                <li class="d-inline-block mr-2"><i class="fab fa-facebook-f fa-2x transition cursor white-color border py-1 px-2"></i></li>
+                <li class="d-inline-block mr-2"><i class="fab fa-twitter fa-2x transition cursor white-color border p-1"></i></li>
+                <li class="d-inline-block mr-2"><i class="fab fa-instagram fa-2x transition cursor white-color border p-1 px-2"></i></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-8 map">
+            <div class="row">
+              <div class="col-6 col-md-3 white-color">
+                  <h4 class="bold text-center"><a href="#" class="white-color transition" data-scroll="#services">Services</a></h4>
+              </div>
+              <div class="col-6 col-md-3 white-color">
+                  <h4 class="bold text-center"><a href="#" class="white-color transition" data-scroll="#offers">Offers</a></h4>
+              </div>
+              <div class="col-6 col-md-3 white-color">
+                  <h4 class="bold text-center"><a href="#" class="white-color transition" data-scroll="#team">Team</a></h4>
+              </div>
+              <div class="col-6 col-md-3 white-color">
+                  <h4 class="bold text-center"><a href="#" class="white-color transition" data-scroll="#customers">Cutomers</a></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Top Footer-->
+    <hr class="theme__bg">
+    <!--Start Bottom Footer-->
+    <div class="bottom-footer mt-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="author white-color">
+                <span class="white-color">Made By: <span class="author theme__color white-bg p-1 rounded bold">Sairitik Naidu</span></span>
+            </div>
+          </div>
+          <div class="col-md-6">
+              <div class="copyrights text-right">
+                <p>&copy; 2023 Fitness <span class="theme__color">Gym</span> All Rights Reserved</p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--End Bottom Footer-->
+  </footer>
+  <!--End Footer-->
+
+  <button class="top-button rounded-circle theme__bg border btn btn-lg z-index shadow" style="display: none;"><i class="fas fa-chevron-up white-color"></i></button>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

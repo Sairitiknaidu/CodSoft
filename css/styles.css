@@ -1,0 +1,430 @@
+/*
+ *
+ * CSS written based on SMACSS architecture.
+ * To learn more, visit: http://smacss.com/
+ * 
+ * For simplicity, no reset or normalize is added. 
+ * To learn more, visit: https://css-tricks.com/reboot-resets-reasoning/
+ *
+*/
+
+/* ---- Base Rules ---- */
+:root {
+    --maincolor: rgb(136,203,171)
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--maincolor);
+    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    color: #fff;
+    padding-top: 86px;
+    overflow-x: hidden;
+}
+
+.theme__color {color: rgb(136,203,171)!important}
+
+.theme__bg    {background: rgb(136,203,171)!important}
+
+/* Typeography General*/
+h1 {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+@media only screen and (min-width: 35em){
+    h1 {
+        font-size: 7em;
+        margin: 2em 4rem 1em;
+    }
+}
+
+h2 {
+    font-family: 'Oxygen', Sans-Serif;
+    font-size: 3em;
+    color: #fff;
+}
+
+p {
+    line-height: 1.6em;
+    color: #eee;
+}
+
+/* ---- Layout Rules ---- */
+.main__header {
+    min-height: 40vh;
+    background-image: url('../images/header.jpg')!important;
+}
+
+section {
+    position: relative;
+    min-height: 80vh;
+}
+
+/* ---- Module Rules ---- */
+/* Logo Styles*/
+.logo {
+    padding: 10px;
+    color: #fff;
+    width: 25%;
+    margin-top: 5px;
+}
+
+.logo  h2 {
+    margin: 0;
+}
+
+.logo  h2 span {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 5px;
+    color: #000;
+    border-radius: 5px;
+}
+
+@media(max-width: 991px) {
+    .logo {
+        width: 100%;
+    }
+}
+
+/* Navigation Styles*/
+.navbar__menu {
+    width: 75%;
+    text-align: right;
+    margin-top: 10px;
+    padding-top: 5px;
+    line-height: 2.5; 
+}
+
+.navbar__menu ul {
+    padding-left: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.navbar__menu li {
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.navbar__menu .menu__link {
+    display: block;
+    padding: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar__menu .menu__link:hover,
+.navbar__menu .menu__link.active {
+    background: var(--maincolor);
+    color: #fff;
+}
+
+.navbar__menu[data-screen = 'mobile'] .button {
+    width: 30px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.navbar__menu[data-screen = 'mobile'] .button .bar {
+    width: 100%;
+    height: 4px;
+    display: block;
+    background-color: #888;
+    margin: 0 0 5px;
+    transition: .5s;
+}
+
+.navbar__menu[data-screen = 'mobile'] .button.transformed .bar:first-child {
+    transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.navbar__menu[data-screen = 'mobile'] .button.transformed .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.navbar__menu[data-screen = 'mobile'] .button.transformed .bar:last-child {
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.navbar__menu[data-screen = 'mobile'] ul#navbar__list {
+    position: absolute;
+    right: 10px;
+    width: 200px;
+    background: #050607;
+    border-radius: 0 0 10px 10px;
+    display: none;
+}
+
+.navbar__menu[data-screen = 'mobile'] ul#navbar__list li {
+    display: block;
+}
+
+/* Header Styles */
+.page__header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+    background: rgba(0,0,0, .6);
+}
+
+/* Footer Styles */
+.page__footer {
+    background: #000;
+    padding: 2em;
+}
+
+.page__footer .top-footer .social li:hover i {
+    color: var(--maincolor);
+}
+
+.page__footer .top-footer a:hover {
+    text-decoration: none;
+    color: var(--maincolor);
+    margin-left: 5px!important;
+}
+
+@media (max-width: 767px) {
+    .page__footer .top-footer .social {
+        text-align: center;
+    }
+
+    .page__footer .bottom-footer .author {
+        margin-bottom: 15px;
+    }
+
+    .page__footer .bottom-footer .author,
+    .page__footer .bottom-footer .copyrights
+     {
+        text-align: center!important;
+    } 
+}
+
+/* To Top Button Styles*/
+.top-button {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+}
+
+/* ---- Theme Rules ---- */
+/* Landing Container Styles */
+.landing__container {
+    padding: .5em;
+    text-align: left;
+}
+
+@media only screen and (min-width: 35em){
+    .landing__container {
+        padding: 2em;
+    }
+}
+/* Background Circles */
+/* Note that background circles are created with psuedo elements before and after */
+/* Circles appear to be random do to use of :nth-of-type psuedo class */
+section:nth-of-type(even) .landing__container::before {
+    content: '';
+    background: rgba(255, 255, 255, 0.187);
+    position: absolute;
+    z-index: -5;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(odd) .landing__container::before {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    top: 3em;
+    right: 3em;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n) .landing__container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -5;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+section:nth-of-type(3n + 1) .landing__container::after {
+    content: '';
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    position: absolute;
+    right: 20vw;
+    bottom: -5em;
+    z-index: -5;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    opacity: 0;
+    transition: ease 0.5s all;
+}
+
+/* ---- Theme State Rules ---- */
+/* Section Active Styles */
+/* Note: active-section class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
+section.active-section {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+section.active-section .landing__container::before {
+    opacity: 1;
+    animation: rotate 4s linear 0s infinite forwards;
+}
+
+section.active-section .landing__container::after {
+    opacity: 1;
+    animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+/* Section Active Styles Keyframe Animations */
+@keyframes rotate {
+	from {
+		transform: rotate(0deg)
+		           translate(-1em)
+		           rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg)
+		           translate(-1em) 
+		           rotate(-360deg);
+	}
+}
+
+/* ---- Sections ---- */
+/* Services */
+.services .section-img img {
+    margin-top: 50%;
+}
+
+@media(max-width: 991px) {
+    .services .section-img img {
+        margin-top: 0;
+    }
+}
+
+/* Offers */
+.offers .offers-boxes .box:not(.active) {
+    display: none;
+}
+
+.offers .offers-boxes .card h5 {
+    position: absolute;
+    top: 20px;
+    left: 10%;
+    width: 80%;
+    background: rgba(255, 255, 255, .6);
+}
+
+.offers .offers-boxes .card .card-body {
+    display: none;
+}
+
+.offers .offers-boxes .card:hover .card-body {
+    display: block;
+}
+
+.offers .offers-boxes .card:hover h5 {
+    color: #fff!important;
+}
+
+.offers .offers-boxes .card .subscribe {
+    width: initial;
+}
+
+.offers .offers-boxes .card .subscribe button:hover {
+    color: #fff;
+    background: transparent;
+}
+
+/* Team */
+.team {
+    background: url('../images/team/team_cover.jpg') no-repeat!important;
+    background-size: cover!important;
+    overflow: hidden;
+}
+
+.team .team-members .card h5 {
+    position: absolute;
+    bottom: -100%;
+    width: 100%;
+}
+
+.team .team-members .card:hover h5 {
+    bottom: -12px;
+}
+
+/* Customers */
+.customers .opinions {
+    margin-top: 10%;
+}
+
+.customers .opinions .opinion:not(.active) {display: none}
+
+.customers  i.fa-chevron-right,
+.customers  i.fa-chevron-left  {
+    position: absolute;
+    top:  50%;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+}
+
+.customers  i.fa-chevron-right {
+    right: 5%;
+}
+
+.customers i.fa-chevron-left {
+    left: 5%;
+}
+
+.customers  i.fa-chevron-right:hover,
+.customers  i.fa-chevron-left:hover  {
+    color: var(--maincolor);
+}
+
+/* Subscribe */
+.subscribe {
+    background: url('../images/subscribe.jpg')!important;
+    background-size: cover;
+    background-position: 40%;
+}
+
+.subscribe form label {
+    color: #fff;
+}
+
+.subscribe form textarea {
+    resize: none;
+    width: 100%;
+    height: 200px;
+}
